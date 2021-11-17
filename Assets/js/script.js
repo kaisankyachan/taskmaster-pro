@@ -46,8 +46,6 @@ var saveTasks = function() {
 };
 
 
-
-
 // modal was triggered
 $("#task-form-modal").on("show.bs.modal", function() {
   // clear values
@@ -89,6 +87,10 @@ $("#remove-tasks").on("click", function() {
     $("#list-" + key).empty();
   }
   saveTasks();
+});
+
+$(".list-group").on("click", "p", function() {
+  console.log("<p> was clicked");
 });
 
 // load tasks for the first time
